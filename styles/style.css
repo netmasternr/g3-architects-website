@@ -4,10 +4,10 @@
 
   *{
     font-family: 'Work Sans', sans-serif;
-    
-   
-}
+    margin: 0;
+    padding: 0;
 
+}
 
 /* shared-style */
 
@@ -20,10 +20,22 @@
     border-radius: 8px;
     border: 0 ;
     cursor: pointer;
+    margin-top: 20px;
 
 }
 
+.text-light-gray{
+    color:#727272;
+    font-size: 1rem;
+    font-weight: 400;
 
+}
+
+.section-title{
+    color:  #131313;
+    font-weight: 700;
+    font-size: 3rem;
+}
 
 /* header-section */
 
@@ -38,11 +50,7 @@ nav{
     align-items: center;
 }
 
-.nav-title{
-    color:  #131313;
-    font-weight: 700;
-    font-size: 3rem;
-}
+
 
 nav > ul{
     display: flex;
@@ -77,47 +85,263 @@ nav li a{
 
 }
 
-.banner-description{
-    color:#727272;
-    font-size: 1rem;
-    font-weight: 400;
-
-}
 
 .banner img{
     width: 100%;
     margin-top: 50px;
 }
 
+/* main section */
 
 
+main{
+    max-width: 1440px;
+    margin: 70px auto;
+}
+
+.teams-container{
+    display: flex;
+    align-items: center;
+    
+}
+
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 1.5rem;
+}
+
+.teams-content{
+   padding-right: 70px ;
+   padding-left: 70px;
+}
+
+.teams-content-title{
+    font-size: 2.8rem;
+    
+}
+
+.Quick-list{
+    color:  #727272;
+    font-weight: 500;
+}
+.of-Our{
+    color: #131313;
+    font-weight: 700;
+}
+
+.text-Features{
+    color: #FF900E;
+    font-weight: 700;
+}
+
+/* feature section */
+
+.features-section{
+    margin-bottom: 70px;
+    display: flex;
+    gap: 100px;
+}
+
+.feature-content .cards{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 60px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+}
+
+.feature-content .section-title{
+    margin-bottom: 20px;
+    border-left: 5px solid  #FF900E;
+    
+}
+
+
+.years-batch{
+    width: 300px;
+    color: #FFF;
+    border-radius: 8px;
+    background: #FF900E;
+    background-color: #FF900E;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    bottom: 100px;
+    right: 50px;
+
+}
+
+.years-batch h2{
+    font-size: 4rem;
+    margin: 0;
+}
+
+.years-batch p{
+    font-size: 1.5rem;
+}
+
+
+
+
+/* fact section */
+
+.facts{
+    margin-top: 70px;
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-container .card{
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    font-size: 2.8rem;
+    padding: 30px 30px;
+   
+
+}
+
+.card-container .card-stats-title{
+    font-size: 2.9rem;
+    color:  #424242;
+    color:  #424242;
+    font-weight: 600;
+    margin-top: 10px;
+    
+
+}
+
+.card-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    
+}
+
+
+/* sponsor */
+
+.sponsor{
+    margin-top: 80px;
+    text-align: center;
+}
+
+.sponsor-title{
+    color:#131313;
+    font-size: 2.8rem;
+    font-weight: 700;
+    padding: 20px;
+}
+
+.sponsor-img-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+.sponsor-img-container img{
+    width: 165px;    
+}
+
+
+footer{
+    border-radius: 8px;
+    background: #FFF4E7;
+    margin: 130px 240px;
+    text-align: center;
+}
+
+.disclaimer{
+    color: var(--Dark-02, #424242);
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 38px 0;
+}
 
 
 /* responsive-mobile device */
-
 
 
 @media screen and (max-width:576px) {
     header{
         padding: 20px;
     }
-    nav{
+
+    nav,
+    .teams-container,
+    .card-container,
+    .sponsor-img-container,
+    .features-section 
+    {
         flex-direction: column;
     }
+
+ .team-img-container{
+    grid-template-columns: 1fr;
+ }
+ .teams-content{
+    padding-right: 30px ;
+    padding-left: 30px;
+ }
+
+ .card-container{
+    margin: 10px 10px;
+ }
+.features-image img {
+    width: 100%;
+      
+} 
+
+footer{
+    margin: 30px 20px;
+}
+
+.disclaimer{
+    font-size: 1rem;
+    padding: 38px 25px;
+}
+
 }
 
 
 /* 
 tablet or medium device */
 
-
 @media screen and (min-width: 576px) and (max-width: 960px) {
-    nav{
+    nav,
+    .teams-container,
+    .sponsor-img-container,
+    .features-section,
+    .card-container
+   
+    {
         flex-direction: column;
     }
     header{
         padding: 50px;
     }
 
+    .features-image img {
+        width: 90%;
+        margin: 0 auto;      
+        
+    }   
+    footer{
+        margin: 70px;
+    }  
+    
+    .disclaimer{
+        font-size: 1rem;
+        padding: 38px 70px;
+    }
     
 }
+
+
